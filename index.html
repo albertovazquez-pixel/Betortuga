@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Betortuga — el juego de la laguna</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="start-screen" class="screen">
+    <div class="start-card">
+      <h1>🐢 Betortuga</h1>
+      <p>Compra terrenos alrededor de la laguna, cobra renta a las demás tortugas y sé la última en pie.</p>
+      <label>
+        Tu nombre
+        <input id="player-name" type="text" value="Jugador" maxlength="16">
+      </label>
+      <label>
+        Número de bots
+        <select id="bot-count">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+        </select>
+      </label>
+      <button id="start-btn" class="btn btn-primary">Comenzar partida</button>
+    </div>
+  </div>
+
+  <div id="game-screen" class="screen hidden">
+    <div class="layout">
+      <div class="board" id="board"></div>
+      <div class="sidebar">
+        <div class="panel" id="players-panel"></div>
+        <div class="panel controls" id="controls-panel"></div>
+        <div class="panel log-panel">
+          <h3>Eventos</h3>
+          <ul id="log-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/board-data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
